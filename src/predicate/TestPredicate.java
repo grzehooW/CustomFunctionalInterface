@@ -1,3 +1,5 @@
+package predicate;
+
 import java.util.function.Predicate;
 
 public class TestPredicate {
