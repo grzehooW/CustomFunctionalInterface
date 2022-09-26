@@ -36,6 +36,10 @@ public class TestPredicate {
         name = "Ms. Anne Bloggs";
         System.out.println("Does " + name + " start with Mr. ? " + check(name, n -> n.startsWith("Mr.")));
 
+        System.out.println("\nVatican city ?: ");
+
+        Predicate<String> pStr = n -> n.contains("City");
+        System.out.println(pStr.test("Vatican City"));
     }
 
     public static <T> boolean check(T t, Predicate<T> lambda){
