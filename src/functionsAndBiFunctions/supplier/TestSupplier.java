@@ -1,8 +1,6 @@
-package supplier;
+package functionsAndBiFunctions.supplier;
 
 import java.time.LocalTime;
-import java.time.chrono.ChronoLocalDateTime;
-import java.util.Locale;
 import java.util.function.Supplier;
 
 public class TestSupplier {

@@ -1,4 +1,4 @@
-package consumerBiConsumer;
+package functionsAndBiFunctions.consumerBiConsumer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,17 +17,19 @@ public class TestConsumer {
     }
 
     static void printConsumer() {
-        Consumer<String> printC = n -> System.out.println(n);
+        Consumer<String> printC = System.out::println;
+//        Consumer<String> printC = n -> System.out.println(n);
         printC.accept("Wypisz to na ekran");
 
         System.out.println("\nDrukuj liste\n");
 
-        List<String> lista = new ArrayList<>();
-        lista.add("Krzysiek");
-        lista.add("Adam");
-        lista.forEach(System.out::println);
+        List<String> names = new ArrayList<>();
+        names.add("Krzysiek");
+        names.add("Adam");
+        names.forEach(System.out::println);
 
-
+        // BiConsumer<T, U> is a functional interface i.e. one abstract method:
+        // void accept(T t, U u);
 
         var mapCapitalCities = new HashMap<String, String>();
 
@@ -36,7 +38,7 @@ public class TestConsumer {
         biCon.accept("Washington", "USA");
         System.out.println(mapCapitalCities);
 
-        System.out.println("// Hash map print Town and Country with description");
+        System.out.println("\n// Hash map print Town and Country with description\n");
 
         BiConsumer<String, String> printMap = (key, value) -> System.out.println(key + " is a capital of " + value);
 

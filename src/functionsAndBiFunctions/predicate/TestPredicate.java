@@ -1,4 +1,4 @@
-package predicate;
+package functionsAndBiFunctions.predicate;
 
 import java.util.function.Predicate;
 

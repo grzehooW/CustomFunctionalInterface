@@ -1,4 +1,4 @@
-package biFunction;
+package functionsAndBiFunctions.biFunction;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -12,11 +12,15 @@ public class TestFunction {
 
     static void function(){
 
-        // Function<T t, U u> is a functional interface i.e. abstract method:
+        // Function<T, R> is a functional interface i.e. abstract method:
         // R apply(T t);
 
-        Function<String, Integer> fn2 = n -> n.length();
-        System.out.println(fn2.apply("Mietek"));
+        // BiFunction<T, U, R> is a functional intrface i.e. one abstract method:
+        // R apply(T t, U u)
+
+        Function<String, Integer> fn2 = String::length;
+//        Function<String, Integer> fn2 = n -> n.length();
+        System.out.println(fn2.apply("Moscove"));
 
         System.out.println("\n// BiFunctional\n");
 
